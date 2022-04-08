@@ -2,16 +2,16 @@ import requests
 from bs4 import BeautifulSoup
 import telebot
 
-bot = telebot.TeleBot(token="5081203527:AAEW_OyeTo9x52-dXx1ltrnGTQl_atdrFjs")
+bot = telebot.TeleBot(token="")
 headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:99.0) Gecko/20100101 Firefox/99.0'
+    'User-Agent': ''
 }
 
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.send_message(message.chat.id, """Привет! Я бот, который позволит быстро находить обои в <b><a href="https://wallpapers.com/">Wallpapers</a></b>
-Для того, чтобы получить обои, введи его название в поле...""",
+    bot.send_message(message.chat.id, """Hey! I am a bot that allows you to quickly find wallpapers in <b><a href="https://wallpapers.com/">Wallpapers</a></b>
+In order to get a wallpaper, enter its name in the field...""",
                      parse_mode="html", disable_web_page_preview=1)
 
 
